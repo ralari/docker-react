@@ -4,7 +4,7 @@ services:
     - docker
 
 before_install:
-    - docker  build -t ntwdock/docker-react -f Dockerfile.dev
+    - docker  build -t ntwdock/docker-react -f Dockerfile.dev .
 
 script:
     - docker run -e CI=true ntwdock/docker-react npm run test
